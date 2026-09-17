@@ -5,6 +5,278 @@
 soong_namespace {
 }
 
+// These blobs are shipped in both 32-bit and 64-bit variants. Keep them as
+// multilib prebuilts instead of PRODUCT_COPY_FILES: fsgen otherwise maps the
+// 32-bit copy into lib64 and reports a duplicate package path.
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_ext_com_qualcomm_qti_ant_1_0",
+	owner: "xiaomi",
+	stem: "com.qualcomm.qti.ant@1.0.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/system_ext/lib/com.qualcomm.qti.ant@1.0.so"] },
+		android_arm64: { srcs: ["proprietary/system_ext/lib64/com.qualcomm.qti.ant@1.0.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_ext_libbinauralrenderer_wrapper_qti",
+	owner: "xiaomi",
+	stem: "libbinauralrenderer_wrapper.qti.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/system_ext/lib/libbinauralrenderer_wrapper.qti.so"] },
+		android_arm64: { srcs: ["proprietary/system_ext/lib64/libbinauralrenderer_wrapper.qti.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_ext_libhoaeffects_qti",
+	owner: "xiaomi",
+	stem: "libhoaeffects.qti.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/system_ext/lib/libhoaeffects.qti.so"] },
+		android_arm64: { srcs: ["proprietary/system_ext/lib64/libhoaeffects.qti.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_ext_libhoaeffects_csim",
+	owner: "xiaomi",
+	stem: "libhoaeffects_csim.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/system_ext/lib/libhoaeffects_csim.so"] },
+		android_arm64: { srcs: ["proprietary/system_ext/lib64/libhoaeffects_csim.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_ext_liblistenjni_qti",
+	owner: "xiaomi",
+	stem: "liblistenjni.qti.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/system_ext/lib/liblistenjni.qti.so"] },
+		android_arm64: { srcs: ["proprietary/system_ext/lib64/liblistenjni.qti.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_ext_liblistensoundmodel2_qti",
+	owner: "xiaomi",
+	stem: "liblistensoundmodel2.qti.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/system_ext/lib/liblistensoundmodel2.qti.so"] },
+		android_arm64: { srcs: ["proprietary/system_ext/lib64/liblistensoundmodel2.qti.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_ext_liblsmclient",
+	owner: "xiaomi",
+	stem: "liblsmclient.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/system_ext/lib/liblsmclient.so"] },
+		android_arm64: { srcs: ["proprietary/system_ext/lib64/liblsmclient.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_ext_libmdsprpc_system",
+	owner: "xiaomi",
+	stem: "libmdsprpc_system.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/system_ext/lib/libmdsprpc_system.so"] },
+		android_arm64: { srcs: ["proprietary/system_ext/lib64/libmdsprpc_system.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_ext_libmmosal",
+	owner: "xiaomi",
+	stem: "libmmosal.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/system_ext/lib/libmmosal.so"] },
+		android_arm64: { srcs: ["proprietary/system_ext/lib64/libmmosal.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_ext_libmmparser_lite",
+	owner: "xiaomi",
+	stem: "libmmparser_lite.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/system_ext/lib/libmmparser_lite.so"] },
+		android_arm64: { srcs: ["proprietary/system_ext/lib64/libmmparser_lite.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_ext_libvr_amb_engine",
+	owner: "xiaomi",
+	stem: "libvr_amb_engine.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/system_ext/lib/libvr_amb_engine.so"] },
+		android_arm64: { srcs: ["proprietary/system_ext/lib64/libvr_amb_engine.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_ext_libvr_object_engine",
+	owner: "xiaomi",
+	stem: "libvr_object_engine.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/system_ext/lib/libvr_object_engine.so"] },
+		android_arm64: { srcs: ["proprietary/system_ext/lib64/libvr_object_engine.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_ext_vendor_qti_hardware_audiohalext_1_0",
+	owner: "xiaomi",
+	stem: "vendor.qti.hardware.audiohalext@1.0.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/system_ext/lib/vendor.qti.hardware.audiohalext@1.0.so"] },
+		android_arm64: { srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.audiohalext@1.0.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_ext_vendor_qti_hardware_qseecom_1_0",
+	owner: "xiaomi",
+	stem: "vendor.qti.hardware.qseecom@1.0.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/system_ext/lib/vendor.qti.hardware.qseecom@1.0.so"] },
+		android_arm64: { srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.qseecom@1.0.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_ext_vendor_qti_hardware_sensorscalibrate_1_0",
+	owner: "xiaomi",
+	stem: "vendor.qti.hardware.sensorscalibrate@1.0.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/system_ext/lib/vendor.qti.hardware.sensorscalibrate@1.0.so"] },
+		android_arm64: { srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_ext_vendor_qti_voiceprint_1_0",
+	owner: "xiaomi",
+	stem: "vendor.qti.voiceprint@1.0.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/system_ext/lib/vendor.qti.voiceprint@1.0.so"] },
+		android_arm64: { srcs: ["proprietary/system_ext/lib64/vendor.qti.voiceprint@1.0.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_libFileMux",
+	owner: "xiaomi",
+	stem: "libFileMux.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/lib/libFileMux.so"] },
+		android_arm64: { srcs: ["proprietary/lib64/libFileMux.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "xiaomi_system_libOmxMux",
+	owner: "xiaomi",
+	stem: "libOmxMux.so",
+	strip: { none: true },
+	target: {
+		android_arm: { srcs: ["proprietary/lib/libOmxMux.so"] },
+		android_arm64: { srcs: ["proprietary/lib64/libOmxMux.so"] },
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+}
+
 cc_prebuilt_library_shared {
 	name: "libsdm-disp-vndapis",
 	owner: "xiaomi",
@@ -872,4 +1144,3 @@ prebuilt_etc_xml {
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
 }
-
